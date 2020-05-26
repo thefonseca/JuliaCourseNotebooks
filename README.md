@@ -1,5 +1,38 @@
 # JuliaCourseNotebooks
 
+## Setup environment using Conda
+These steps were tested on macOS 10.15.4.
+
+1. Install Anaconda or [Miniconda](https://docs.conda.io/en/latest/miniconda.html).
+2. Create and activate the `julia` environment:
+```
+conda create -n julia
+conda activate julia
+```
+3. Install Jupyter and Julia (from conda-forge):
+```
+conda install jupyter
+conda install -c conda-forge julia==1.1.1
+```
+3. Enter the [Julia REPL](https://docs.julialang.org/en/v1/stdlib/REPL/):
+```
+julia
+```
+4. Install the [Julia kernel for Jupyter](https://github.com/JuliaLang/IJulia.jl):
+```
+using Pkg
+Pkg.add("IJulia")
+# exit Julia REPL
+exit()
+```
+5. Run Jupyter
+```
+jupyter notebook
+```
+A new browser window/tab will be opened and you should see an option to create a new "Julia" notebook.
+
+---
+
 Jupyter notebooks and Juno .jl files for the Julia Scientific Programming course on Coursera
 
 The recently released version 1.0 of Julia marked a milestone in the development of the language.  Julia has been a rapidly evolving language.  This creates challenges when teaching Julia.  Over the next few weeks and month the course code will be adapted to comply with the changes introduced in Julia 1.0 (0.7).
